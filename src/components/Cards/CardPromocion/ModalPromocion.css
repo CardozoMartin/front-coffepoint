@@ -1,0 +1,12 @@
+.modal-promocion-body {
+  padding: 20px;
+}
+
+.promo-img-full {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.promo-titulo {
+  font-weight: 600;
+}
