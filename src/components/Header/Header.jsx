@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import LogoCoffe from "../../assets/img/LogoCoffe.png"
+import LogoCoffe from "../../assets/img/Logos/LogoCoffe.png"
 import { FaBars } from 'react-icons/fa';
 import GranoPuntos from '../utils/GranoPunto'; // 
 import './Header.css';
