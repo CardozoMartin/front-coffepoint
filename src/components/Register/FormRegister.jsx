@@ -11,19 +11,19 @@ const FormRegister = () => {
     const { register, formState: { errors }, handleSubmit: onSubmitRHF, reset } = useForm();
 
     //TQuery------------------------------
-    const { mutate: postUser} = useMutation({
+    const { mutate: postUser } = useMutation({
         mutationFn: postRegisterFn,
-        onSuccess: ()=>{
+        onSuccess: () => {
             toast.success("Usuario registrado correctamente, revise su correo para activar su cuenta")
             reset()
         },
-        onError:()=>{
+        onError: () => {
             toast.error("Error al registrarse, intente nuevamente")
 
             reset();
         }
     })
-    
+
 
     //Handler-------------------------------
     //creamos la funcion para mandar los datos del formulario
@@ -31,7 +31,7 @@ const FormRegister = () => {
         console.log(data)
         postUser(data)
     }
-    
+
     return (
         <form className="form-register" onSubmit={onSubmitRHF(handleSubmit)}>
             {/* Error general placeholder */}
@@ -114,8 +114,8 @@ const FormRegister = () => {
                     error={errors.telefono || (errors.telefono && errors.telefono.message)}
                     option={{
                         required: 'El teléfono es obligatorio',
-                        maxLength:{
-                            value:10,
+                        maxLength: {
+                            value: 10,
                             message: 'El teléfono no debe exceder los 10 dígitos'
                         },
                         pattern: {

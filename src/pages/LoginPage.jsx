@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/login.css' 
 import { Coffee } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LoginForm from '../components/Login/LoginForm';
 
 const LoginPage = ({ onSwitchToRegister }) => {
   return (
@@ -22,47 +23,7 @@ const LoginPage = ({ onSwitchToRegister }) => {
             </div>
 
             {/* Formulario */}
-            <form>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Correo electrónico
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="form-control"
-                  placeholder="tu@email.com"
-                />
-              </div>
-
-              <div className="mb-4">
-                <label htmlFor="password" className="form-label">
-                  Contraseña
-                </label>
-                <div className="position-relative">
-                  <input
-                    type="password"
-                    id="password"
-                    className="form-control"
-                    placeholder="••••••••"
-                    style={{ paddingRight: '2.5rem' }}
-                  />
-                  <button
-                    type="button"
-                    className="password-toggle"
-                  >
-                    <i className="bi bi-eye"></i>
-                  </button>
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                className="btn btn-coffee"
-              >
-                Iniciar Sesión
-              </button>
-            </form>
+            <LoginForm />
 
             {/* Switch to register */}
             <div className="text-center mt-4">
