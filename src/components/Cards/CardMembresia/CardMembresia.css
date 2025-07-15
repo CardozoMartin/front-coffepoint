@@ -1,0 +1,28 @@
+.card-membresia {
+  width: 180px;
+  min-height: 260px;
+  background-color: #fff;
+  margin: 0 10px;
+  padding: 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Trapezoide */
+  transform: perspective(800px) rotateY(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.card-membresia:hover {
+  transform: scale(1.05) perspective(800px) rotateY(0deg);
+}
+
+.card-membresia h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-membresia p {
+  margin: 0;
+  color: #333;
+  font-size: 0.9rem;
+}

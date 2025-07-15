@@ -1,0 +1,26 @@
+/* Contenedor del carrusel con márgenes responsivos */
+.contenedor-carrusel {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .contenedor-carrusel {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+/* Imágenes del carrusel */
+.carrusel-img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .carrusel-img {
+    height: 250px;
+  }
+}

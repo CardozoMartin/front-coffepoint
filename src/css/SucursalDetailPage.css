@@ -1,0 +1,18 @@
+.sucursal-banner {
+  position: relative;
+  background-color: #ddd;
+  height: 140px;
+  overflow: hidden;
+}
+
+.logo-sucursal {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 2px; /* leve ajuste si lo ves muy arriba */
+}
+.btn-outline-success {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+}

@@ -1,0 +1,21 @@
+.grano-puntos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7a6a3c; /* Marrón oliva */
+  border-radius: 30px;
+  padding: 4px 10px;
+  min-width: 48px;
+  height: 32px;
+}
+
+.grano-icono {
+  height: 20px;
+  margin-right: 6px;
+}
+
+.grano-numero {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
