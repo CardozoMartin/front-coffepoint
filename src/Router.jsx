@@ -7,18 +7,28 @@ import SucursalPage from './pages/SucursalPage'
 import MembresiaPage from './pages/MembresiaPage'
 import PerfilPage from './pages/PerfilPage'
 import SucursalDetailPage from './pages/SucursalDetailPage'
+import RutasPrivadas from './Rutas/RutasPrivadas'
+import RutasPublicas from './Rutas/RutasPublicas'
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+
+        {/* Define las rutas públicas */}
+        <Route element={<RutasPublicas />}>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/membresia" element={<MembresiaPage />} />
-        <Route path="/sucursal" element={<SucursalPage />} />
-        <Route path="/perfil" element={<PerfilPage />} />
-        <Route path="/sucursal/:id" element={<SucursalDetailPage />} />
+        </Route>
+
+        {          /* Define las rutas privadas */}
+        <Route element={<RutasPrivadas />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/membresia" element={<MembresiaPage />} />
+          <Route path="/sucursal" element={<SucursalPage />} />
+          <Route path="/perfil" element={<PerfilPage />} />
+          <Route path="/sucursal/:id" element={<SucursalDetailPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
