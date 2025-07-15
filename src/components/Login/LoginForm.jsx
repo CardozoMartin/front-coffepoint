@@ -3,8 +3,13 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import Input from '../utils/Input'
 import { postLoginFn } from '../../API/apiLogin'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'sonner'
 
 const LoginForm = () => {
+
+    //RRD------------------------------------------
+    const navigate = useNavigate();
 
     //RHF--------------------------------------------
     const { register, formState: { errors }, handleSubmit: onSubmitRHF, reset } = useForm();
@@ -14,7 +19,9 @@ const LoginForm = () => {
     const { mutate: postLogin } = useMutation({
         mutationFn: postLoginFn,
         onSuccess: (data) => {
-            console.log('Login successful:', data)
+            toast.success('Inicio de sesión exitoso')
+            reset()
+            navigate('/')
         },
         onError: (error) => {
             console.error('Login failed:', error)

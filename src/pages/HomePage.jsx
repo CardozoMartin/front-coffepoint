@@ -5,8 +5,13 @@ import Carrousel from '../components/Carrousel/Carrousel';
 import CardPromocion from '../components/Cards/CardPromocion/CardPromocion';
 import { PromocionesData } from '../data/PromocionesData';
 import NavBar from '../components/Navbar/NavBar';
+import { useAuthSessionStore } from '../store/authSessionStore';
 
 const HomePage = () => {
+
+  const { user} = useAuthSessionStore()
+
+  console.log(user)
   return (
     <div style={{ paddingBottom: '90px' }}> {/* Espacio para el NavBar */}
       <Header />
